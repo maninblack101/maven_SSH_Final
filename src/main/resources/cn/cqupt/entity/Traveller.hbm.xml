@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-13 21:15:46 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.cqupt.entity.Traveller" table="traveller">
+        <id name="traveller_id" type="java.lang.Long">
+            <generator class="increment" />
+        </id>
+        <property name="traveller_name" type="java.lang.String">
+        </property>
+        <property name="email" type="java.lang.String">
+        </property>
+        <property name="phone" type="java.lang.String">
+        </property>
+        <property name="order_time" type="java.lang.String">
+        </property>
+        <property name="limited_day" type="java.lang.String">
+        </property>
+        <property name="traveller_cert" type="java.lang.String">
+        </property>
+        <property name="leave_day" type="java.lang.String">
+        </property>
+      
+        <one-to-one name="room" class="cn.cqupt.entity.Room" fetch="join" cascade="save-update" property-ref="traveller" />
+     
+    </class>
+</hibernate-mapping>

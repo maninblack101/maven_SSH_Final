@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-11 9:09:36 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.cqupt.entity.Supplier" table="supplier">
+        <id name="supplier_id" type="java.lang.Long">
+            <generator class="increment" />
+        </id>
+       
+        <property name="supplier_name" type="java.lang.String">
+        </property>
+        <property name="supplier_shortname" type="java.lang.String">
+        </property>
+        <property name="financing" type="java.lang.Double">
+        </property>
+        <property name="telphone" type="java.lang.String">
+        </property>
+        <property name="address" type="java.lang.String">
+        </property>
+        <property name="bank" type="java.lang.String">
+        </property>
+        <property name="bank_id" type="java.lang.String">
+        </property>
+        <property name="business_id" type="java.lang.String">
+        </property>
+        <property name="tax_id" type="java.lang.String">
+        </property>
+        <property name="taxplayer_propert" type="java.lang.String">
+        </property>
+        <property name="business_scope" type="java.lang.String">
+        </property>
+        <property name="service_promise" type="java.lang.String">
+        </property>
+        <property name="option_advice" type="java.lang.String">
+        </property>
+        <property name="create_time" type="java.lang.String">
+        </property>
+        <property name="modify_time" type="java.lang.String">
+        </property>
+        <property name="delete_time" type="java.lang.String">
+        </property>
+        <property name="Column_21" type="java.lang.String">
+        </property>
+    </class>
+</hibernate-mapping>

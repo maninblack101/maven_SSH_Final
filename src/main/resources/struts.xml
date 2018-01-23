@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+<constant name="struts.devMode" value="true"></constant>
+
+<package name="crm" namespace="/" extends="struts-default">
+
+<!--拦截器的配置  -->
+<interceptors>
+<!--自定义拦截器配置  -->
+<interceptor name="LoginInterceptor" class="cn.cqupt.interceptor.LoginInterceptor"></interceptor>
+<!--自定义拦截器栈配置  -->
+<interceptor-stack name="myStack">
+<interceptor-ref name="LoginInterceptor">
+     <!--指定不拦截方法  -->
+     <param name="excludeMethods">login</param>
+</interceptor-ref>
+<interceptor-ref name="defaultStack"></interceptor-ref>
+</interceptor-stack>
+
+</interceptors>
+<!--设置默认拦截栈  -->
+<default-interceptor-ref name="myStack"></default-interceptor-ref>
+
+<global-results>
+<result name="toLogin" type="redirect">/room/index.jsp</result>
+</global-results>
+
+<global-exception-mappings >
+<exception-mapping result="error" exception="java.lang.RuntimeException"></exception-mapping>
+</global-exception-mappings>
+
+
+<action name="SupplierAction_*" class="supplierAction" method="{1}">
+<result name="list">/list.jsp</result>
+<result name="tolist" type="redirectAction">
+        <param name="namespace">/</param>
+        <param name="actionName">SupplierAction_list</param>
+</result>
+<result name="toedit">/add.jsp</result>
+<allowed-methods>list,add,toedit,delete</allowed-methods>
+</action>
+
+
+<action name="UserAction_*" class="userAction" method="{1}">
+<result name="tohome" type="redirect">/room/index.jsp</result>
+<result name="error">/room/index.jsp</result>
+<allowed-methods>login,logout</allowed-methods>
+</action>
+
+
+<action name="RoomAction_*" class="roomAction" method="{1}">
+<result name="list">/room/list.jsp</result>
+<result name="tolist" type="redirectAction">
+        <param name="namespace">/</param>
+        <param name="actionName">RoomAction_list</param>
+</result>
+<result name="toedit">/room/add.jsp</result>
+<allowed-methods>list,add,toedit,delete</allowed-methods>
+</action>
+
+
+
+<action name="TravellerAction_*" class="travellerAction" method="{1}">
+<result name="list">/traverller/list.jsp</result>
+<result name="tolist" type="redirectAction">
+        <param name="namespace">/</param>
+        <param name="actionName">TravellerAction_list</param>
+</result>
+<result name="toedit">/traverller/add.jsp</result>
+<allowed-methods>add,list,toedit，delete</allowed-methods>
+</action>
+</package>
+</struts>

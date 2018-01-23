@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-13 17:32:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.cqupt.entity.Room" table="room">
+        <id name="room_id" type="java.lang.Long">
+            <generator class="increment" />
+        </id>
+        <property name="room_number" type="java.lang.String">
+        </property>
+        <property name="room_kind" type="java.lang.Integer">
+        </property>
+        <property name="room_price" type="java.lang.Double">
+        </property>
+        <many-to-one name="traveller" column="travller" class="cn.cqupt.entity.Traveller" fetch="join" cascade="all">
+        </many-to-one>
+    </class>
+</hibernate-mapping>
