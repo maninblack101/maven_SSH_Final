@@ -8,7 +8,6 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import cn.cqupt.dao.SupplierDao;
 import cn.cqupt.entity.Room;
 import cn.cqupt.entity.Traveller;
 import cn.cqupt.service.RoomService;

@@ -76,9 +76,7 @@
 	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
 	
 	<!--action  -->
-	<bean id="supplierAction" class="cn.cqupt.action.SupplierAction" scope="prototype">
-	<property name="us" ref="supplierService"></property>
-	</bean>
+	
 	<bean id="userAction" class="cn.cqupt.action.UserAction" scope="prototype">
 	<property name="us" ref="userService"></property>
 	</bean>
@@ -91,9 +89,7 @@
 	
 	
 	<!--service  -->
-	<bean id="supplierService" class="cn.cqupt.serviceImpl.SupplierServiceImpl">
-	<property name="ud" ref="supplierDao"></property>
-	</bean>
+	
 	<bean id="userService" class="cn.cqupt.serviceImpl.UserServiceImpl">
 	<property name="ud" ref="userDao"></property>
 	</bean>
@@ -105,9 +101,7 @@
 	</bean>
 	
 	<!--dao  -->
-	<bean id="supplierDao" class="cn.cqupt.daoImpl.SupplierDaoImpl">
-	<property name="sessionFactory" ref="sessionFactory"></property>
-	</bean>
+	
 	<bean id="userDao" class="cn.cqupt.daoImpl.UserDaoImpl">
 	<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>

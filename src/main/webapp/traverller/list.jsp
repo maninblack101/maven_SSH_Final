@@ -11,13 +11,13 @@
     <title>home</title>
 
     <!-- BOOTSTRAP STYLES-->
-    <link href="${pageContext.request.contextPath }/traverller/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
-    <link href="${pageContext.request.contextPath }/traverller/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
        <!--CUSTOM BASIC STYLES-->
-    <link href="${pageContext.request.contextPath }/traverller/assets/css/basic.css" rel="stylesheet" />
+    <link href="../assets/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN STYLES-->
-    <link href="${pageContext.request.contextPath }/traverller/assets/css/custom.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <!--分页css  -->
@@ -72,7 +72,7 @@
                 <ul class="nav" id="main-menu">
                     <li>
                         <div class="user-img-div">
-                            <img src="assets/img/user.png" class="img-thumbnail" />
+                            <img src="../assets/img/user.png" class="img-thumbnail" />
 
                             <div class="inner-text">
                                 
@@ -99,7 +99,7 @@
                         <a href="#"><i class="fa fa-desktop ">  房间管理</i> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="add.jsp"><i class="fa fa-toggle-on"></i>  新增房间</a>
+                                <a href="${pageContext.request.contextPath }/room/add.jsp"><i class="fa fa-toggle-on"></i>  新增房间</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)"  ><i class="fa fa-bell "></i>  房间信息修改</a>
@@ -119,7 +119,7 @@
                                 <a href="javascript:void(0)"  ><i class="fa fa-bell "></i>  旅客信息修改</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath }/TraverllerAction_list" class="active"><i class="fa fa-bell "></i>旅客列表</a>
+                                <a href="${pageContext.request.contextPath }/TraverllerAction_list" class="active-menu"><i class="fa fa-bell "></i>旅客列表</a>
                             </li>
                         </ul>
                     </li>

@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
-encoding//src/main/webapp/login.jsp=UTF-8
+encoding//src/main/webapp/index.jsp=UTF-8
+encoding//src/main/webapp/login/login.jsp=UTF-8
 encoding//src/main/webapp/room/add.jsp=UTF-8
-encoding//src/main/webapp/room/index.jsp=UTF-8
 encoding//src/main/webapp/room/list.jsp=UTF-8
 encoding//src/test/java=UTF-8

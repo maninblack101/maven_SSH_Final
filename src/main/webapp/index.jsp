@@ -10,15 +10,28 @@
     <title>home</title>
 
     <!-- BOOTSTRAP STYLES-->
-    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
-    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="/assets/css/font-awesome.css" rel="stylesheet" />
        <!--CUSTOM BASIC STYLES-->
-    <link href="../assets/css/basic.css" rel="stylesheet" />
+    <link href="/assets/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN STYLES-->
-    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <link href="/assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+ 
+	
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+	
+	<script src="/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+ 
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+	
+	<script src="bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+	<script src="/login/login-register.js" type="text/javascript"></script>
+	<link href="/assets/css/login-register.css" rel="stylesheet" />
+	<link href="/login/login-register.css" rel="stylesheet" />
+	
 </head>
 <body>
     <div id="wrapper">
@@ -34,8 +47,7 @@
             </div>
 
             <div class="header-right">
-
-                 <!--未登录显示  -->
+                <!--未登录显示  -->
                 <c:if test="${user!=null }">
                 <a href="message-task.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"></i></a>
                 <a href="message-task.html" class="btn btn-primary" title="New Task"><b>40 </b><i class="fa fa-bars fa-2x"></i></a>
@@ -44,7 +56,7 @@
                 
                 <!--登录显示  -->
                 <c:if test="${user==null }">
-                <button class="btn btn-lg btn-primary" onclick="openLoginModal();"><b>登录</b><i class="fa fa-user" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-primary" onclick="openLoginModal()"><b>登录</b><i class="fa fa-user" aria-hidden="true"></i></button>
                 <button class="btn btn-lg btn-info" onclick="openRegisterModal();"><b>注册</b><i class="fa fa-circle-o" aria-hidden="true"></i></button>                
                 </c:if>
             </div>
@@ -55,12 +67,12 @@
                 <ul class="nav" id="main-menu">
                     <li>
                         <div class="user-img-div">
-                            <img src="../assets/img/user.png" class="img-thumbnail" />
+                            <img src="/assets/img/user.png" class="img-thumbnail" />
 
                             <div class="inner-text">
                                 
                             <br />
-                                                 <strong>
+                                <strong>
            <c:if test="${user!=null }">                   
                                 管理员${user.user_name }
             </c:if>     </strong>
@@ -68,7 +80,7 @@
             <c:if test="${user==null }">
                                 请登录!
             </c:if>                
-                     </strong>  
+                     </strong>          
                             </div>
                         </div>
 
@@ -76,13 +88,13 @@
 
 
                     <li>
-                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard "></i>管理中心</a>
+                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard "></i>个人中心</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-desktop ">  房间管理</i> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
+                        <ul class="nav nav-second-level ">
                             <li>
-                                <a href="${pageContext.request.contextPath }/room/add.jsp"><i class="fa fa-toggle-on"></i>  新增房间</a>
+                                <a href="/room/add.jsp"><i class="fa fa-toggle-on"></i>  新增房间</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)"  ><i class="fa fa-bell "></i>  房间信息修改</a>
@@ -92,11 +104,12 @@
                             </li>
                         </ul>
                     </li>
-                      <li class="active">
+                    
+                     <li>
                         <a href="#"><i class="fa fa-desktop ">  旅客管理</i> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="javascript:void(0)" class="active-menu"><i class="fa fa-toggle-on"></i>  新增旅客信息</a>
+                                <a href="${pageContext.request.contextPath }/traverller/add.jsp"><i class="fa fa-toggle-on"></i>  新增旅客信息</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)"  ><i class="fa fa-bell "></i>  旅客信息修改</a>
@@ -116,69 +129,24 @@
         <!-- /. 右侧  -->
         <div id="page-wrapper">
             <div id="page-inner">
-                         <div class="panel-heading">
-                   <s:property value="#traveller==null?'新建':'修改'"/>房间信息
-                        </div>
-                        <div class="panel-body">
-                            <form role="form" action="${pageContext.request.contextPath }/TravellerAction_add" method="post">
-                                        <div class="form-group">
-                                            <label>旅客姓名</label>
-                                            <input class="form-control" type="text" name="traveller_name" value="${traveller.traveller_name }">
-                                            <p class="help-block">Help text here.</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>身份证号码</label>
-                                            <input class="form-control" type="text" name="traveller_cert" value="${traveller.traveller_cert }">
-                                            <p class="help-block">Help text here.</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>电话号码</label>
-                                            <input class="form-control" type="text" name="phone" value="${traveller.phone }">
-                                            <p class="help-block">Help text here.</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>e-mail</label>
-                                            <input class="form-control" type="text" name="email" value="${traveller.email }">
-                                            <p class="help-block">Help text here.</p>
-                                        </div>
-                                        
-                                    <hr>
-                                     <div class="form-group">
-                                            <label>入住日期</label>
-                                            <input class="form-control" type="text" name="order_time" value="${traveller.order_time }">
-                                     <p class="help-block">Help text here.</p>
-                                        </div>
-                                         <div class="form-group">
-                                            <label>入住天数</label>
-                                            <input class="form-control" type="text" name="limited_day" value="${traveller.limited_day }">
-                                     <p class="help-block">Help text here.</p>
-                                           </div>
-                                     <hr>    
-                                         <div class="form-group">
-                                            <label>入住房间</label>
-                                            <input class="form-control" type="text" name="room_id" value="${traveller.room.room_number }">
-                                     <p class="help-block">Help text here.</p>
-                                           </div>
-                                       
-                                       
-                                       </div>
-                           
-                                        <button type="submit" class="btn btn-info">提交 </button>
-
-                                    </form>
-                            </div>
+                
                                
                                 
                             </div>
                         </div>
                     </div>
+                    
+                </div>
+                <!-- /. ROW  -->
             <!-- /. PAGE INNER  -->
         </div>
         <!-- /. PAGE WRAPPER  -->
     </div>
     <!-- /. WRAPPER  -->
-
-    <s:debug></s:debug>
+    
+    <%-- <%@include file="login.jsp" %> --%>
+     <jsp:include page="/login/login.jsp"/>
+    
     <!-- /. FOOTER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->

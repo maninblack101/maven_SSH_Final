@@ -10,13 +10,13 @@
     <title>home</title>
 
     <!-- BOOTSTRAP STYLES-->
-    <link href="${pageContext.request.contextPath }/room/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
-    <link href="${pageContext.request.contextPath }/room/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
        <!--CUSTOM BASIC STYLES-->
-    <link href="${pageContext.request.contextPath }/room/assets/css/basic.css" rel="stylesheet" />
+    <link href="../assets/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN STYLES-->
-    <link href="${pageContext.request.contextPath }/room/assets/css/custom.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -55,7 +55,7 @@
                 <ul class="nav" id="main-menu">
                     <li>
                         <div class="user-img-div">
-                            <img src="assets/img/user.png" class="img-thumbnail" />
+                            <img src="../assets/img/user.png" class="img-thumbnail" />
 
                             <div class="inner-text">
                                 

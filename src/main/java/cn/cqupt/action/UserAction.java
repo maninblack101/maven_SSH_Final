@@ -1,7 +1,6 @@
 package cn.cqupt.action;
 
 import cn.cqupt.entity.User;
-import cn.cqupt.service.SupplierService;
 import cn.cqupt.service.UserService;
 
 import com.opensymphony.xwork2.ActionContext;

@@ -11,18 +11,18 @@
     <title>home</title>
 
     <!-- BOOTSTRAP STYLES-->
-    <link href="${pageContext.request.contextPath }/room/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
-    <link href="room/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
        <!--CUSTOM BASIC STYLES-->
-    <link href="${pageContext.request.contextPath }/room/assets/css/basic.css" rel="stylesheet" />
+    <link href="../assets/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN STYLES-->
-    <link href="${pageContext.request.contextPath }/room/assets/css/custom.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <!--分页css  -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/room/css/lrtk.css" type="text/css">
-    <script src="${pageContext.request.contextPath }/room/assets/js/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="../css/lrtk.css" type="text/css">
+    <script src="../assets/js/jquery-1.10.2.js"></script>
     <SCRIPT language=javascript>
 	function changePage(pageNum){
 		

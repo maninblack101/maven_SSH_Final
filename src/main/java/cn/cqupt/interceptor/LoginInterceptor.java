@@ -15,7 +15,7 @@ public class LoginInterceptor extends MethodFilterInterceptor {
 				Map<String, Object> session = ActionContext.getContext().getSession();
 				//获得登录标识
 				Object obj = session.get("user");
-				//不存在，没登陆，重定向到login.jsp
+				//不存在，没登陆，重定向到tologin.jsp
 				if(obj==null){
 					return "toLogin";
 				}else{
