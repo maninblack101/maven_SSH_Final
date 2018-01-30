@@ -62,8 +62,9 @@
         <param name="namespace">/</param>
         <param name="actionName">TravellerAction_list</param>
 </result>
+<result name="findTraveller">/traverller/findTraveller.jsp</result>
 <result name="toedit">/traverller/add.jsp</result>
-<allowed-methods>add,list,toedit，delete</allowed-methods>
+<allowed-methods>add,list,toedit,delete,findTraveller</allowed-methods>
 </action>
 </package>
 </struts>

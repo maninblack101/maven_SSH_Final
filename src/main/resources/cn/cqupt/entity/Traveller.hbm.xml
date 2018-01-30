@@ -22,7 +22,7 @@
         <property name="leave_day" type="java.lang.String">
         </property>
       
-        <one-to-one name="room" class="cn.cqupt.entity.Room" fetch="join" cascade="save-update" property-ref="traveller" />
+        <one-to-one name="room" class="cn.cqupt.entity.Room" fetch="join" cascade="save-update" />
      
     </class>
 </hibernate-mapping>

@@ -21,7 +21,7 @@
     <!-- GOOGLE FONTS-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <!--分页css  -->
-    <link rel="stylesheet" href="/css/lrtk.css" type="text/css">
+    <link rel="stylesheet" href="../css/lrtk.css" type="text/css">
     
     <SCRIPT language=javascript>
 	function changePage(pageNum){
@@ -170,7 +170,7 @@
                                             <td>${t.traveller_name }</td>
                                             <td>${t.traveller_cert }</td>
                                             <td>${t.phone }</td>
-                                            <td></td>
+                                            <td>${t.room.room_number }</td>
                                             <td></td>
                                             <td>
                         <button type="button" class="btn btn-sm btn-info" onclick="window.location.href='${pageContext.request.contextPath }/TravellerAction_toedit?traveller_id=${t.traveller_id }'">修改</button>

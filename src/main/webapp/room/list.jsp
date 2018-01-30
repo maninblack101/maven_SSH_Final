@@ -23,6 +23,7 @@
     <!--分页css  -->
     <link rel="stylesheet" href="../css/lrtk.css" type="text/css">
     <script src="../assets/js/jquery-1.10.2.js"></script>
+   
     <SCRIPT language=javascript>
 	function changePage(pageNum){
 		
@@ -39,6 +40,12 @@
 	function findByKind(kind){
 		$("#roomKindInput").val(kind);
 		$("#pageForm").submit();
+	};
+	function findTraveller(id){
+		var x=window.screen.availHeight-300;
+		var y=window.screen.availWidth-600;
+		var win=window.open('${pageContext.request.contextPath}/TravellerAction_findTraveller?traveller_id='+id,'','width=600,height=400','');
+		win.moveTo(x/2,y/2-30);
 	};
 	function deleteConfirm(deleteID,deleteName){
 		if(window.confirm("确认删除"+deleteName+"?")){
@@ -192,10 +199,11 @@
                                             <td>${room.room_price }</td>
                                              <td>
                                          <c:if test="${empty room.traveller }">空房</c:if>
-                                            <c:if test="${not empty room.traveller}"> <button type="button" class="btn btn-danger" onclick="findTraveller(${room.traveller})"></button></c:if>
+                                            
+                                            <c:if test="${not empty room.traveller}"> <button type="button" class="btn btn-danger" onclick="findTraveller(${room.traveller.traveller_id})">已入住</button></c:if>
                                             </td>
                                             <td>
-                        <button type="button" class="btn btn-sm btn-info" onclick="window.location.href='${pageContext.request.contextPath }/RoomAction_toedit?room_id=${room.room_id }'">修改</button>
+                        <button type="button"  class="btn btn-sm btn-info" onclick="window.location.href='${pageContext.request.contextPath }/RoomAction_toedit?room_id=${room.room_id }'">修改</button>
                         <button type="button" class="btn btn-sm btn-danger" onclick="deleteConfirm('${room.room_id }',${room.room_number })">删除</button></td> 
                                         </tr>
                                        </c:forEach>

@@ -13,7 +13,7 @@
         </property>
         <property name="room_price" type="java.lang.Double">
         </property>
-        <many-to-one name="traveller" column="travller" class="cn.cqupt.entity.Traveller" fetch="join" cascade="all">
+        <many-to-one name="traveller" column="traveller_id" class="cn.cqupt.entity.Traveller" fetch="join" cascade="save-update">
         </many-to-one>
     </class>
 </hibernate-mapping>

@@ -52,7 +52,17 @@ public class TravellerAction extends ActionSupport implements ModelDriven<Travel
 		ts.checkOutById(traveller.getTraveller_id());
 		return "tolist";
 	}
+	
+	public String findTraveller() throws Exception{
+	    traveller = ts.getById(traveller.getTraveller_id());
+	    ActionContext.getContext().put("travller", traveller);
+	    return "findTraveller";
+	}
 
+	
+	
+	
+	
 	public Integer getCurrentPage() {
 		return currentPage;
 	}
